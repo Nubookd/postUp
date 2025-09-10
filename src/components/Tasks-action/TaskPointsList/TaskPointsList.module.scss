@@ -1,0 +1,27 @@
+@use "../../../assets/styles/variables.scss" as *;
+
+.task {
+  &__points {
+    display: flex;
+    flex-direction: column;
+    &-list {
+      font-family: $ff-M-r;
+      font-size: $text;
+    }
+  }
+  &__point {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid transparent;
+    transition: 0.1s;
+    &-isComplete {
+      border: 2px solid $green;
+      -webkit-box-shadow: 0 0 2px 1px $green;
+      -moz-box-shadow: 0 0 2px 1px $green;
+      box-shadow: 0 0 2px 1px $green;
+    }
+  }
+}

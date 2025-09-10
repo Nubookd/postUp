@@ -1,0 +1,16 @@
+@use "../../assets/styles/variables.scss" as *;
+
+.button {
+  background-color: $light-yellow;
+  border: 0;
+  border-radius: 30px;
+  padding: 8px;
+  color: $brown;
+  font-family: $ff-MA-b;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: auto;
+  
+}

@@ -1,0 +1,6 @@
+@use "../../assets/styles/variables.scss" as *;
+
+.header__action {
+  display: flex;
+  gap: $header-action-gap;
+}

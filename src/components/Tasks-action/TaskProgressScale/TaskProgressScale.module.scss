@@ -1,0 +1,30 @@
+@use "../../../assets/styles/variables.scss" as *;
+
+.progress-container {
+  position: relative;
+  width: 100%;
+}
+
+.progress-bg {
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4CAF50;
+  transition: width 0.3s ease;
+}
+
+.progress-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+  font-weight: bold;
+  font-family: $ff-M-m;
+  font-size: $text;
+}

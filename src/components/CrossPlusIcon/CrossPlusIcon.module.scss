@@ -1,0 +1,10 @@
+@use "../../assets/styles/variables.scss" as *;
+
+.cross__icon-plus {
+  fill: $brown;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: rotate(360deg) scale(1.2);
+  }
+}

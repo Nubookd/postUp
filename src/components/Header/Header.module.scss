@@ -1,0 +1,17 @@
+@use "../../assets/styles/variables.scss" as *;
+
+
+.header {
+  padding-block: $header-padding-block;
+  padding-inline: $header-padding-inline;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  -webkit-box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.6);
+
+  background-color: $light-yellow;
+}

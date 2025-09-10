@@ -1,0 +1,152 @@
+@use "../../../assets/styles/variables.scss" as *;
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(#000, 0.4);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    .modal__inner {
+      transform: scale(1);
+      opacity: 1;
+      /* Добавьте это для плавности */
+      transition: transform 0.3s ease, opacity 0.3s ease, max-height 0.3s ease;
+    }
+  }
+
+  .modal__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background-color: $light-yellow;
+    border-radius: 20px;
+    padding: 20px;
+    padding-inline: 5px;
+    max-width: 50%;
+    z-index: 100;
+
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    // overflow: hidden;
+
+    font-family: $ff-M-m;
+    font-size: $text;
+
+    transform: scale(0.5);
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: 0.1s;
+    .modal__inner-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      max-height: calc(80vh - 40px); /* Учитываем padding */
+      overflow-y: auto;
+      overflow-x: hidden;
+      width: 100%;
+      padding-right: 0px;
+      /* Кастомный скроллбар */
+      &::-webkit-scrollbar {
+        width: 8px;
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $brown;
+        border-radius: 4px;
+        border: 2px solid $light-yellow;
+        transition: background 0.3s ease;
+      }
+    }
+
+    input {
+      border-radius: $border-radius;
+      border: 2px solid #000;
+      &::placeholder {
+        color: $brown;
+      }
+    }
+    .close__modal {
+      position: fixed;
+      top: 5px;
+      right: 5px;
+      background-color: transparent;
+    }
+    .task__title-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      width: 100%;
+      .task__title {
+        text-align: center;
+        margin: 5px;
+        width: 100%;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+      }
+    }
+
+    .points__task-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-block: 10px;
+      .points__title {
+        font-family: $ff-M-m;
+        font-size: $subtitle;
+        text-align: center;
+      }
+      .point__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        .point__item-inner {
+          font-family: $ff-MA-b;
+          font-size: $text;
+          .point__item-title-span,
+          .point__item-deadline-span {
+            font-family: $ff-M-m;
+            font-size: $subtitle;
+          }
+          .point__item-title,
+          .point__item-deadline {
+            font-family: $ff-M-r;
+            font-size: $text;
+          }
+        }
+      }
+    }
+  }
+
+  .modal__title {
+    font-family: $ff-MA-sb;
+    font-size: $title;
+  }
+
+  button {
+    font-family: $ff-MA-sb;
+    font-size: $subtitle;
+  }
+}

@@ -1,0 +1,33 @@
+@use "../../../assets/styles/variables.scss" as *;
+
+.task {
+  &__point {sss
+    &-isComplete {
+      border: 2px solid $green;
+      -webkit-box-shadow: 0 0 2px 1px $green;
+      -moz-box-shadow: 0 0 2px 1px $green;
+      box-shadow: 0 0 2px 1px $green;
+    }
+    &-item {
+      margin-bottom: 10px;
+      padding: 10px;
+      font-family: $ff-M-m;
+      font-size: $text;
+    }
+    &-text {
+      font-family: $ff-M-m;
+      font-size: $text;
+      margin: 0 0 5px 0;
+    }
+    &-title {
+      font-family: $ff-MA-sb;
+      font-size: $subtitle;
+    }
+    &-deadline {
+      font-family: $ff-M-m;
+      font-size: $text;
+      margin: 0;
+    }
+  }
+  
+}

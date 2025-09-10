@@ -1,0 +1,12 @@
+@use "../../../assets/styles/variables.scss" as *;
+
+
+.point__task-inner {
+  display: flex;
+  flex-direction: column;
+
+  .create__point-button {
+    font-family: $ff-M-m;
+    font-size: $subtitle;
+  }
+}

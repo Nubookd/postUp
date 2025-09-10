@@ -1,0 +1,61 @@
+
+
+@font-face {
+  font-family: "MontserratRegular";
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MontserratMedium";
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MontserratAlternatesSemiBold";
+  src: url("../fonts/MontserratAlternates-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MontserratAlternatesBold";
+  src: url("../fonts/MontserratAlternates-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+$light-yellow: rgba(241, 237, 189, 1);
+$light-blue: rgba(64, 119, 222, 1);
+$light-pink: rgba(231, 221, 245, 1);
+$light-orange: rgba(222, 111, 64, 0.6);
+$brown: rgba(89, 67, 54, 1);
+$green: rgba(0, 128, 0, 1);
+$gray: #9E9E9E;
+$gray-light: #E0E0E0;
+
+$ff-M-r: MontserratRegular, sans-serif;
+$ff-M-m: MontserratMedium, sans-serif;
+$ff-MA-sb: MontserratAlternatesSemiBold, sans-serif;
+$ff-MA-b: MontserratAlternatesBold, sans-serif;
+
+$title: clamp(32px, 3.333vw, 48px);
+$subtitle: clamp(24px, 2.222vw, 32px);
+$text: clamp(16px, 1.667vw, 24px);
+$subtext: clamp(14px, 1.111vw, 16px);
+
+$header-padding-block: 10px;
+$header-padding-inline: 30px;
+$header-action-gap: 60px;
+
+$main-padding-block: 30px;
+$main-padding-inline: 70px;
+
+$border-radius: 5px;

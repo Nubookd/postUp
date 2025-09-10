@@ -1,0 +1,85 @@
+@use "../../assets/styles/variables.scss" as *;
+
+.task__point {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-checkbox {
+    $block: &;
+    margin-right: 5rem;
+    cursor: pointer;
+
+    &-label {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &-input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+
+      &:checked + #{$block}-label {
+        #{$block}-icon-tick {
+          stroke-dashoffset: 0;
+        }
+        #{$block}-icon-border {
+          stroke: $light-blue;
+        }
+      }
+
+      &:focus-visible + #{$block}-label {
+        outline: 2px solid $green;
+        outline-offset: 2px;
+      }
+      &:disabled + #{$block}-label {
+        cursor: not-allowed;
+        opacity: 0.6;
+
+        #{$block}-icon-tick {
+          stroke: $gray;
+        }
+
+        #{$block}-icon-border {
+          stroke: $light-blue;
+        }
+      }
+    }
+
+    &-icon {
+      width: 30px;
+      height: 30px;
+      transition: all 0.2s ease;
+
+      &-border {
+        stroke: $light-blue;
+      }
+      &-tick {
+        stroke: $green;
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+        transition: stroke-dashoffset 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+          stroke 0.3s ease;
+      }
+    }
+
+    &:hover &-icon {
+      transform: scale(1.1);
+
+      &-border {
+        stroke: $light-blue;
+      }
+    }
+
+    &-input:checked ~ &-label &-icon {
+      filter: drop-shadow(0 0 4px rgba($green, 0.3));
+    }
+  }
+}

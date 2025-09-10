@@ -1,0 +1,10 @@
+@use "../../assets/styles/variables.scss" as *;
+
+.detail {
+  &__icon {
+    &-active {
+      transform: rotate(-180deg);
+      transition: 0.3s;
+    }
+  }
+}

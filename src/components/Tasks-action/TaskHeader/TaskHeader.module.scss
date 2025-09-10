@@ -1,0 +1,23 @@
+@use "../../../assets/styles/variables.scss" as *;
+
+.task {
+  $block: &;
+  &__header {
+    #{$block}__title {
+      font-family: $ff-MA-sb;
+      font-size: $title;
+      word-break: break-all;
+    }
+    #{$block}__delete-button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: transparent;
+    }
+  }
+  &__title-void {
+    font-family: $ff-M-m;
+    font-size: $subtitle;
+  }
+}
+
